@@ -30,7 +30,7 @@ import Jimp = require('jimp');
       
       // 
     } else {
-      res.status(400).send("not a valid image url");
+      res.status(422).send("not a valid image url");
     }
     
   });
