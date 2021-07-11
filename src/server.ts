@@ -23,7 +23,7 @@ import Jimp = require('jimp');
       var filteredpath : string;
       filterImageFromURL(image_url).then( (filteredpath) => {
         console.log(filteredpath);
-        res.sendFile(filteredpath, {}, (error) => {
+        res.status(200).sendFile(filteredpath, {}, (error) => {
           deleteLocalFiles([filteredpath]);
         });
       })    
